@@ -1,0 +1,11 @@
+{
+  "name": "module-7-backend-nodejs",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Bootcamp Software Engineering - Level 2 Module 7 Node.js Backend",
+  "scripts": {
+    "test:7.1": "node lesson-7.1-practice.js",
+    "test:7.2": "node lesson-7.2-practice.js",
+    "test:assessment": "node assessment-module-7.js"
+  }
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Katalog produk teknologi terkini - Mini Project Review 1 Bootcamp">
+  <title>TechVault — Katalog Produk Terintegrasi (Review 1)</title>
+  <style>
+    /* ========================================================
+       MODUL 3: CSS ARCHITECTURE & BOX MODEL
+       ======================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      background-color: #0f172a; /* Dark sleek modern palette */
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar Flexbox */
+    .site-header {
+      background-color: #1e293b;
+      border-bottom: 1px solid #334155;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand-logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #38bdf8;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-menu a:hover {
+      color: #38bdf8;
+    }
+
+    /* Main Container & CSS Grid */
+    .main-content {
+      max-width: 1200px;
+      width: 100%;
+      margin: 40px auto;
+      padding: 0 24px;
+      flex: 1;
+    }
+
+    .page-title {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .page-subtitle {
+      color: #94a3b8;
+      margin-bottom: 32px;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    /* Kartu Produk (Kombinasi Grid & Flexbox) */
+    .product-card {
+      background-color: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
+    }
+
+    .product-badge {
+      display: inline-block;
+      background-color: #0369a1;
+      color: #e0f2fe;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      align-self: flex-start;
+    }
+
+    .product-name {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+      color: #f8fafc;
+    }
+
+    .product-desc {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+
+    .price-container {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .original-price {
+      font-size: 0.9rem;
+      color: #64748b;
+      text-decoration: line-through;
+    }
+
+    .final-price {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #38bdf8;
+    }
+
+    .btn-action {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #ffffff;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-action:hover {
+      opacity: 0.9;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: #0b1120;
+      border-top: 1px solid #1e293b;
+      padding: 24px;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SEMANTIC HEADER -->
+  <header class="site-header">
+    <a href="#" class="brand-logo">TechVault</a>
+    <nav aria-label="Navigasi Utama">
+      <ul class="nav-menu">
+        <li><a href="#">Katalog</a></li>
+        <li><a href="#">Promo</a></li>
+        <li><a href="#">Tentang</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SEMANTIC MAIN CONTENT -->
+  <main class="main-content">
+    <header>
+      <h1 class="page-title">Koleksi Perangkat Unggulan</h1>
+      <p class="page-subtitle">Peralatan komputasi performa tinggi untuk software engineer modern.</p>
+    </header>
+
+    <!-- CSS GRID DYNAMIC CONTAINER -->
+    <section class="catalog-grid" id="productGrid">
+      <!-- Kartu produk akan di-render secara dinamis oleh JavaScript -->
+    </section>
+  </main>
+
+  <!-- SEMANTIC FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2026 TechVault Inc. Proyek Pembelajaran Terintegrasi (Review 1).</p>
+  </footer>
+
+  <!-- ========================================================
+       MODUL 1: JAVASCRIPT LOGIC & HTTP FETCH SIMULATION
+       ======================================================== -->
+  <script>
+    // 1. DATA MODEL (Simulasi respon JSON dari HTTP API Backend)
+    const rawProductsData = [
+      {
+        id: 1,
+        name: "Mechanical Keyboard Pro 75%",
+        category: "Peripheral",
+        description: "Gasket mount dengan lubed switch dan bodi full aluminium CNC.",
+        price: 2100000,
+        discountPercent: 15
+      },
+      {
+        id: 2,
+        name: "Monitor Ultrawide 34\" 144Hz",
+        category: "Display",
+        description: "Panel IPS WQHD dengan akurasi warna 99% sRGB dan port USB-C 90W PD.",
+        price: 7500000,
+        discountPercent: 10
+      },
+      {
+        id: 3,
+        name: "Ergonomic Mesh Chair",
+        category: "Workspace",
+        description: "Dukungan lumbar 3D dinamis dengan armrest 4D untuk sesi koding maraton.",
+        price: 3200000,
+        discountPercent: 0
+      },
+      {
+        id: 4,
+        name: "Thunderbolt 4 Docking Station",
+        category: "Connectivity",
+        description: "Output triple display 4K, 2.5Gbps Ethernet, dan slot pembaca kartu SD UHS-II.",
+        price: 2850000,
+        discountPercent: 20
+      }
+    ];
+
+    // 2. CLEAN FUNCTIONS (Single Responsibility Principle)
+    const calculateDiscountedPrice = (price, discountPercent = 0) => {
+      if (discountPercent <= 0) return price;
+      return price - (price * (discountPercent / 100));
+    };
+
+    const formatRupiah = (amount) => {
+      return `Rp${amount.toLocaleString("id-ID")}`;
+    };
+
+    // 3. DOM RENDERER (Render elemen secara semantik)
+    const renderCatalog = (products) => {
+      const gridContainer = document.getElementById("productGrid");
+      if (!gridContainer) return;
+
+      gridContainer.innerHTML = products.map((product) => {
+        const finalPrice = calculateDiscountedPrice(product.price, product.discountPercent);
+        const hasDiscount = product.discountPercent > 0;
+
+        return `
+          <article class="product-card" id="product-${product.id}">
+            <div>
+              <span class="product-badge">${product.category}</span>
+              <h2 class="product-name">${product.name}</h2>
+              <p class="product-desc">${product.description}</p>
+            </div>
+            <div>
+              <div class="price-container">
+                <span class="final-price">${formatRupiah(finalPrice)}</span>
+                ${hasDiscount ? `<span class="original-price">${formatRupiah(product.price)}</span>` : ""}
+              </div>
+              <button class="btn-action" onclick="handleAddToCart('${product.name}')">
+                Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+        `;
+      }).join("");
+    };
+
+    const handleAddToCart = (productName) => {
+      alert(`Sukses: ${productName} telah ditambahkan ke keranjang belanja!`);
+    };
+
+    // Inisialisasi saat DOM siap
+    document.addEventListener("DOMContentLoaded", () => {
+      renderCatalog(rawProductsData);
+    });
+  </script>
+
+</body>
+</html>

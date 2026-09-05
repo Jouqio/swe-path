@@ -1,0 +1,11 @@
+{
+  "name": "taskflow-enterprise-api",
+  "version": "2.0.0",
+  "description": "TaskFlow Enterprise RESTful API Platform - Level 2 Capstone",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-strip-types src/main.ts",
+    "test": "node --experimental-strip-types test/project-2.test.ts"
+  },
+  "keywords": ["taskflow", "enterprise", "backend", "nestjs", "postgresql", "docker"]
+}

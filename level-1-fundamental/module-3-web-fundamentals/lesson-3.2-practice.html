@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktik Lesson 3.2 — Semantic HTML & a11y</title>
+  <style>
+    body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    .box { border: 1px dashed #ccc; padding: 15px; margin: 15px 0; border-radius: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- 
+    BAGIAN 1: EXERCISE (Refactoring Div Soup ke Semantic HTML5)
+    Tugas: Ubah struktur di dalam kotak di bawah ini agar menggunakan:
+    <header>, <nav>, <main>, <section>, <article>, <h1>, <h2>, <footer>
+  -->
+  <section class="box">
+    <h2>Latihan 1: Refactoring Kode di Bawah Ini</h2>
+
+    <!-- TULIS VERSI SEMANTIK DI BAWAH INI: -->
+    
+  </section>
+
+  <!--
+    BAGIAN 2: DEBUGGING (Formulir Aksesibel)
+    Tugas: Perbaiki form pembayaran di bawah ini agar memenuhi standar Accessibility (a11y):
+    1. Ganti div klik menjadi <button>
+    2. Tambahkan atribut alt pada gambar
+    3. Hubungkan label dengan input menggunakan for dan id
+  -->
+  <section class="box">
+    <h2>Latihan 2: Debugging Aksesibilitas</h2>
+
+    <form action="/pay" method="POST">
+      <!-- PERBAIKI KODE DI BAWAH INI -->
+      <div class="checkout-box">
+        <img src="card-icon.png">
+        <span>Nomor Kartu Kredit:</span>
+        <input type="text" placeholder="1234-5678-9012-3456">
+        <div onclick="alert('bayar')">Bayar Sekarang</div>
+      </div>
+    </form>
+  </section>
+
+</body>
+</html>

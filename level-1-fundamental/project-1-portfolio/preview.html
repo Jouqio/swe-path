@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio & TaskFlow Enterprise Manager - Level 1 Capstone Project">
+  <title>Alex Pratama — Software Engineer Portfolio & TaskFlow</title>
+  <style>
+    /* ========================================================
+       MODERN DESIGN SYSTEM (Dark Mode Slate Architecture)
+       ======================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-main: #0b1120;
+      --bg-card: #1e293b;
+      --border-color: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --success: #22c55e;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 1. SEMANTIC HEADER & NAVBAR (FLEXBOX) */
+    .site-header {
+      background-color: rgba(30, 41, 59, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 16px;
+      list-style: none;
+    }
+
+    .nav-tabs button {
+      background: none;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .nav-tabs button.active, .nav-tabs button:hover {
+      color: var(--text-main);
+      background-color: var(--border-color);
+      border-color: #475569;
+    }
+
+    /* 2. MAIN CONTAINER */
+    .app-container {
+      max-width: 1100px;
+      width: 100%;
+      margin: 40px auto;
+      padding: 0 24px;
+      flex: 1;
+    }
+
+    /* 3. HERO & PORTFOLIO SECTION (CSS GRID) */
+    .hero-banner {
+      padding: 40px 0 60px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 40px;
+    }
+
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-bio {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+
+    .skill-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-badge {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .section-heading {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .project-title {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    /* 4. TASKFLOW MANAGER (INTERACTIVE ENGINE) */
+    .taskflow-panel {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .progress-bar-container {
+      background-color: #0f172a;
+      height: 10px;
+      border-radius: 9999px;
+      overflow: hidden;
+      margin: 16px 0 28px;
+    }
+
+    .progress-bar-fill {
+      background: linear-gradient(90deg, var(--accent), var(--success));
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .task-form {
+      display: grid;
+      grid-template-columns: 1fr 160px 120px;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .task-form {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .input-field, .select-field {
+      background-color: #0f172a;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .input-field:focus, .select-field:focus {
+      outline: 2px solid var(--accent);
+    }
+
+    .btn-submit {
+      background-color: var(--accent);
+      color: #0f172a;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 12px;
+    }
+
+    .filter-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .filter-btn.active {
+      background-color: var(--border-color);
+      color: var(--accent);
+    }
+
+    .task-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .task-item {
+      background-color: #0f172a;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+
+    .task-item.completed {
+      opacity: 0.6;
+    }
+
+    .task-item.completed .task-text {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    .task-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+    }
+
+    .priority-tag {
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .priority-HIGH { background-color: rgba(239, 68, 68, 0.2); color: #f87171; }
+    .priority-MEDIUM { background-color: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+    .priority-LOW { background-color: rgba(34, 197, 94, 0.2); color: #4ade80; }
+
+    .btn-delete {
+      background: none;
+      border: none;
+      color: #64748b;
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 4px 8px;
+    }
+
+    .btn-delete:hover {
+      color: var(--danger);
+    }
+
+    /* 5. SEMANTIC FOOTER */
+    .site-footer {
+      background-color: #050811;
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. SEMANTIC HEADER (Flexbox) -->
+  <header class="site-header">
+    <a href="#" class="brand-logo" onclick="switchView('portfolio')">
+      ⚡ DevCraft Platform
+    </a>
+    <nav aria-label="Navigasi Utama">
+      <ul class="nav-tabs">
+        <li><button id="tab-portfolio" class="active" onclick="switchView('portfolio')">Portfolio</button></li>
+        <li><button id="tab-tasks" onclick="switchView('tasks')">TaskFlow Manager</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 2. MAIN APP CONTAINER -->
+  <main class="app-container">
+
+    <!-- VIEW A: DEVELOPER PORTFOLIO -->
+    <div id="view-portfolio">
+      <section class="hero-banner">
+        <h1 class="hero-title">Alex Pratama</h1>
+        <p class="hero-bio">
+          Fullstack Software Engineer berfokus pada arsitektur React, Next.js, dan TypeScript modern berkinerja tinggi.
+        </p>
+        <div class="skill-badges">
+          <span class="skill-badge">TypeScript</span>
+          <span class="skill-badge">React</span>
+          <span class="skill-badge">Next.js App Router</span>
+          <span class="skill-badge">Clean Code</span>
+          <span class="skill-badge">Git Workflow</span>
+          <span class="skill-badge">RESTful HTTP</span>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-heading">Proyek Rekayasa Unggulan</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <div>
+              <h3 class="project-title">E-Commerce High Performance</h3>
+              <p class="project-desc">Katalog produk multi-kategori dengan Server-Side Rendering dan caching ISR sub-100ms.</p>
+            </div>
+            <span class="skill-badge">Next.js • TypeScript</span>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <h3 class="project-title">TaskFlow Enterprise Engine</h3>
+              <p class="project-desc">Sistem manajemen tugas interaktif dengan state management immutable dan visual progress bar.</p>
+            </div>
+            <span class="skill-badge">React Hooks • Modern CSS</span>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <h3 class="project-title">Financial Transaction Pipeline</h3>
+              <p class="project-desc">Sistem pemrosesan mutasi rekening dengan strict typing and discriminated union error handling.</p>
+            </div>
+            <span class="skill-badge">TypeScript Strict • HTTP</span>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- VIEW B: TASKFLOW ENTERPRISE MANAGER -->
+    <div id="view-tasks" style="display: none;">
+      <section class="taskflow-panel">
+        <header>
+          <h2 style="font-size: 2rem; margin-bottom: 4px;">TaskFlow Sprint Tracker</h2>
+          <p id="taskStats" style="color: var(--text-muted);">Memuat progres tugas...</p>
+          <div class="progress-bar-container">
+            <div id="progressBar" class="progress-bar-fill"></div>
+          </div>
+        </header>
+
+        <!-- Form Tambah Tugas -->
+        <form id="taskForm" class="task-form" onsubmit="handleFormSubmit(event)">
+          <input 
+            type="text" 
+            id="taskInput" 
+            class="input-field" 
+            placeholder="Ketik tugas sprint baru..." 
+            required 
+          />
+          <select id="prioritySelect" class="select-field">
+            <option value="HIGH">Tinggi (High)</option>
+            <option value="MEDIUM" selected>Sedang (Med)</option>
+            <option value="LOW">Rendah (Low)</option>
+          </select>
+          <button type="submit" class="btn-submit">+ Tambah</button>
+        </form>
+
+        <!-- Filter Row -->
+        <div class="filter-row">
+          <button class="filter-btn active" id="filter-ALL" onclick="setFilter('ALL')">Semua</button>
+          <button class="filter-btn" id="filter-ACTIVE" onclick="setFilter('ACTIVE')">Aktif</button>
+          <button class="filter-btn" id="filter-COMPLETED" onclick="setFilter('COMPLETED')">Selesai</button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskListContainer" class="task-list"></ul>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- 3. SEMANTIC FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2026 DevCraft Global. Level 1 Software Engineering Bootcamp Capstone Project.</p>
+  </footer>
+
+  <!-- ========================================================
+       APPLICATION STATE & CONTROLLER (TS/React Logic in Browser)
+       ======================================================== -->
+  <script>
+    // Initial State
+    let tasks = [
+      { id: "1", title: "Kuasai TypeScript Interface & Generics", priority: "HIGH", isCompleted: true },
+      { id: "2", title: "Bangun Komponen React & Props Composition", priority: "HIGH", isCompleted: true },
+      { id: "3", title: "Arsitektur Next.js App Router & Server Components", priority: "MEDIUM", isCompleted: true },
+      { id: "4", title: "Lulus Practical Assessment Level 1 Gate", priority: "HIGH", isCompleted: false },
+    ];
+
+    let currentFilter = "ALL";
+
+    // View Switcher
+    function switchView(viewName) {
+      document.getElementById("view-portfolio").style.display = viewName === "portfolio" ? "block" : "none";
+      document.getElementById("view-tasks").style.display = viewName === "tasks" ? "block" : "none";
+
+      document.getElementById("tab-portfolio").className = viewName === "portfolio" ? "active" : "";
+      document.getElementById("tab-tasks").className = viewName === "tasks" ? "active" : "";
+
+      if (viewName === "tasks") renderTasks();
+    }
+
+    // Filter Controller
+    function setFilter(filterType) {
+      currentFilter = filterType;
+      document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+      document.getElementById(`filter-${filterType}`).classList.add("active");
+      renderTasks();
+    }
+
+    // Add Task Handler (Immutable)
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById("taskInput");
+      const priority = document.getElementById("prioritySelect").value;
+      const text = input.value.trim();
+
+      if (!text) return;
+
+      const newTask = {
+        id: Date.now().toString(),
+        title: text,
+        priority: priority,
+        isCompleted: false,
+      };
+
+      tasks = [newTask, ...tasks];
+      input.value = "";
+      renderTasks();
+    }
+
+    // Toggle Task Status (Immutable)
+    function toggleTask(id) {
+      tasks = tasks.map(t => t.id === id ? { ...t, isCompleted: !t.isCompleted } : t);
+      renderTasks();
+    }
+
+    // Delete Task (Immutable)
+    function deleteTask(id) {
+      tasks = tasks.filter(t => t.id !== id);
+      renderTasks();
+    }
+
+    // Render Engine (DOM Reconciliation)
+    function renderTasks() {
+      const container = document.getElementById("taskListContainer");
+      const statsText = document.getElementById("taskStats");
+      const progressBar = document.getElementById("progressBar");
+
+      // Derived State
+      const total = tasks.length;
+      const completed = tasks.filter(t => t.isCompleted).length;
+      const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+      statsText.textContent = `${completed} dari ${total} tugas terselesaikan (${percentage}%)`;
+      progressBar.style.width = `${percentage}%`;
+
+      // Filtered List
+      const visibleTasks = tasks.filter(t => {
+        if (currentFilter === "ACTIVE") return !t.isCompleted;
+        if (currentFilter === "COMPLETED") return t.isCompleted;
+        return true;
+      });
+
+      if (visibleTasks.length === 0) {
+        container.innerHTML = `<li style="text-align:center; padding: 24px; color: var(--text-muted);">Tidak ada tugas di kategori ini.</li>`;
+        return;
+      }
+
+      container.innerHTML = visibleTasks.map(task => `
+        <li class="task-item ${task.isCompleted ? 'completed' : ''}">
+          <div class="task-left" onclick="toggleTask('${task.id}')">
+            <span>${task.isCompleted ? '✅' : '⬜'}</span>
+            <span class="priority-tag priority-${task.priority}">${task.priority}</span>
+            <span class="task-text">${task.title}</span>
+          </div>
+          <button class="btn-delete" onclick="deleteTask('${task.id}')" aria-label="Hapus tugas">✕</button>
+        </li>
+      `).join("");
+    }
+
+    // Initial render
+    renderTasks();
+  </script>
+
+</body>
+</html>
