@@ -28,6 +28,24 @@
 
 const handleHttpResponse = (statusCode, data) => {
   // --- TULIS KODEMU DI SINI ---
+  switch (statusCode) {
+    case 200:
+      return "Sukses: Data berhasil diambil";
+    case 201:
+      return "Sukses: Sumber daya baru berhasil dibuat";
+    case 400:
+      return "Gagal: Format request tidak valid";
+    case 401:
+      return "Gagal: Anda harus login terlebih dahulu";
+    case 403:
+      return "Gagal: Anda tidak memiliki akses ke halaman ini";
+    case 404:
+      return "Gagal: Data tidak ditemukan";
+    case 500:
+      return "Gagal: Terjadi kesalahan di server internal";
+    default:
+      return `Status HTTP tidak dikenali: ${statusCode}`;
+  }
 };
 
 // Test Cases:
@@ -45,11 +63,21 @@ console.log(handleHttpResponse(500, null));
 
 const loginUserInsecure = async (username, password) => {
   // SALAH (Insecure GET dengan password di URL)
-  const response = await fetch(`https://api.example.com/login?u=${username}&p=${password}`);
+  const response = await fetch(`https://api.example.com/login`,
+    {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password })
+    });
   return response.json();
 };
 
 // Tulis perbaikan fungsi loginUserSecure di bawah ini:
 const loginUserSecure = async (username, password) => {
   // --- TULIS KODEMU DI SINI ---
+  const response = await fetch(`https://api.example.com/login`,
+    {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password })
+    });
+  return response.json();
 };

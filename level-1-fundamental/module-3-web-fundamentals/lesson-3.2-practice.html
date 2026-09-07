@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Praktik Lesson 3.2 — Semantic HTML & a11y</title>
-  <style>
-    body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-    .box { border: 1px dashed #ccc; padding: 15px; margin: 15px 0; border-radius: 8px; }
-  </style>
+  <title>Praktik Lesson 3.2 Semantic HTML & a11y</title>
+  <link rel="stylesheet" href="lesson-3.2-practice.css">
 </head>
+
 <body>
 
   <!-- 
@@ -20,7 +19,38 @@
     <h2>Latihan 1: Refactoring Kode di Bawah Ini</h2>
 
     <!-- TULIS VERSI SEMANTIK DI BAWAH INI: -->
-    
+    <header>
+      <h1>Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+      </section>
+      <section>
+        <h2>My Projects</h2>
+        <article>
+          <h3>Project 1</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </article>
+        <article>
+          <h3>Project 2</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2022</p>
+    </footer>
+
+
   </section>
 
   <!--
@@ -35,14 +65,21 @@
 
     <form action="/pay" method="POST">
       <!-- PERBAIKI KODE DI BAWAH INI -->
+
       <div class="checkout-box">
-        <img src="card-icon.png">
-        <span>Nomor Kartu Kredit:</span>
-        <input type="text" placeholder="1234-5678-9012-3456">
-        <div onclick="alert('bayar')">Bayar Sekarang</div>
+        <img src="card-icon.png" alt="Ikon kartu kredit">
+
+        <label for="card-number">Nomor Kartu Kredit:</label>
+
+        <input type="text" id="card-number" name="card-number" placeholder="1234-5678-9012-3456">
+
+        <button type="submit" onclick="alert('bayar')">
+          Bayar Sekarang
+        </button>
       </div>
     </form>
   </section>
 
 </body>
+
 </html>

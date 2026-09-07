@@ -1,10 +1,10 @@
-# 📦 LEVEL 1 — MODUL 2: GIT & VERSION CONTROL
+# LEVEL 1, MODUL 2: GIT & VERSION CONTROL
 ## LESSON 2.2: Branching, Merging & Conflict Resolution Strategies
 
 ---
 
-### 📋 Prerequisite & Metadata
-- **Prerequisite:** [Lesson 2.1: Git Architecture & Commands](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-2-git/lesson-2.1-git-fundamentals.md)
+### Prerequisite & Metadata
+- **Prerequisite:** [Lesson 2.1: Git Architecture & Commands]
 - **Learning Objectives:**
   1. Memahami konsep dasar Branching sebagai *lightweight movable pointer* ke sebuah commit.
   2. Menguasai pembuatan, perpindahan, dan penghapusan branch menggunakan perintah modern `git switch` dan `git branch`.
@@ -17,7 +17,7 @@
 
 ---
 
-### 🏷️ Klasifikasi Standar Industri
+### Klasifikasi Standar Industri
 - **MUST KNOW (Wajib):** `git branch`, `git switch -c <name>` (atau `git checkout -b`), `git merge`, anatomi Merge Conflict.
 - **SHOULD KNOW (Penting):** Fast-forward vs No-FF (`--no-ff`), Git Flow vs Trunk-Based Development, `git branch -d`.
 - **NICE TO KNOW (Lanjutan):** `git rebase` vs `git merge`, Git cherry-pick, detached HEAD recovery.
