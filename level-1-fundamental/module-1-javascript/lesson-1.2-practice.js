@@ -27,7 +27,23 @@
 
 // --- TULIS KODEMU DI BAWAH INI ---
 
+const transactionAmount = 300000;
+const isVipMember = true;
+let discountPercentage = 0;
 
+if (transactionAmount >= 500000 && isVipMember === true) {
+  discountPercentage = 0.25;
+} else if (transactionAmount >= 250000 && isVipMember === true) {
+  discountPercentage = 0.15;
+} else if (transactionAmount >= 250000 && isVipMember === false) {
+  discountPercentage = 0.10;
+} else {
+  discountPercentage = 0;
+}
+
+const finalAmount = transactionAmount - (transactionAmount * discountPercentage);
+
+console.log(`Diskon: ${discountPercentage * 100}%, Total Akhir: Rp${finalAmount}`);
 
 // ====================================================================
 // BAGIAN 2: DEBUGGING (Temukan & Perbaiki Kesalahan)
@@ -37,9 +53,9 @@
 
 let countdown = 3;
 
-while (countdown = 0) {
+while (countdown > 0) { //while loop berjalan selama countdown > 0
   console.log(`Detik: ${countdown}`);
-  countdown;
+  countdown--; // decrement dari 3, 2, 1 (sampai 0)
 }
 
 console.log("Waktu Habis!");

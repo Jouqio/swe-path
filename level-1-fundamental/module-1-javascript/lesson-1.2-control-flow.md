@@ -1,10 +1,10 @@
-# 📘 LEVEL 1 — MODUL 1: PROGRAMMING FUNDAMENTALS (JAVASCRIPT)
+## LEVEL 1, MODUL 1: PROGRAMMING FUNDAMENTALS (JAVASCRIPT)
 ## LESSON 1.2: Operators & Control Flow
 
 ---
 
-### 📋 Prerequisite & Metadata
-- **Prerequisite:** [Lesson 1.1: Variables & Data Types](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-1-javascript/lesson-1.1-variables.md)
+### Prerequisite & Metadata
+- **Prerequisite:** [Lesson 1.1: Variables & Data Types]
 - **Learning Objectives:**
   1. Memahami operator aritmatika, perbandingan, dan logika dalam JavaScript modern.
   2. Menguasai perbedaan mendasar strict equality (`===`) vs loose equality (`==`) serta bahaya *implicit coercion*.
@@ -17,10 +17,25 @@
 
 ---
 
-### 🏷️ Klasifikasi Standar Industri
-- **MUST KNOW (Wajib):** `===`, `!==`, `>`, `<`, `>=`, `<=`, `&&`, `||`, `!`, `if`, `else if`, `else`, `for loop`.
-- **SHOULD KNOW (Penting):** Ternary operator (`condition ? a : b`), `switch/case`, short-circuit evaluation (`&&` / `||`), `while loop`.
-- **NICE TO KNOW (Lanjutan):** Nullish coalescing (`??`), optional chaining (`?.`), bitwise operators.
+### Klasifikasi Standar Industri
+- **MUST KNOW (Wajib):** `===`, `!==`, `>`, `<`, `>=`, `<=`, `&&`, `||`, `!`, `if`, `else if`, `else`, `for loop`. (harus hafal)
+penjelasan : 
+-- `===` artinya sama dengan dan tipe datanya juga sama 
+-- `!==` : tidak sama dengan dan tipe datanya juga tidak sama 
+-- `>` : lebih besar dari 
+-- `<` : lebih kecil dari 
+-- `>=` : lebih besar dari atau sama dengan 
+-- `<=` : lebih kecil dari atau sama dengan 
+-- `&&` : dan 
+-- `||` : atau 
+-- `!` : tidak 
+-- `if` : jika 
+-- `else if` : jika tidak maka 
+-- `else` : selain itu 
+-- `for loop` : perulangan 
+
+- **SHOULD KNOW (Penting):** Ternary operator (`condition ? a : b`), `switch/case`, short-circuit evaluation (`&&` / `||`), `while loop`. (sering digunakan)
+- **NICE TO KNOW (Lanjutan):** Nullish coalescing (`??`), optional chaining (`?.`), bitwise operators. (opsional)
 
 ---
 
@@ -131,7 +146,7 @@ for (let counter = 1; counter <= 6; counter++) {
 
 ### 8. EXERCISE (Latihan Mandiri)
 
-> 📍 *Kerjakan latihan ini di file:* [lesson-1.2-practice.js](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-1-javascript/lesson-1.2-practice.js)
+> *Kerjakan latihan ini di file:* [lesson-1.2-practice.js]
 
 **Skenario Bisnis: Sistem Penentuan Diskon Marketplace**
 Buatlah logika penentuan diskon belanja dengan aturan berikut:

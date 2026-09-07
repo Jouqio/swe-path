@@ -1,9 +1,9 @@
-# 📘 LEVEL 1 — MODUL 1: PROGRAMMING FUNDAMENTALS (JAVASCRIPT)
+# LEVEL 1, MODUL 1: PROGRAMMING FUNDAMENTALS (JAVASCRIPT)
 ## LESSON 1.1: Variables & Data Types
 
 ---
 
-### 📋 Prerequisite & Metadata
+### Prerequisite & Metadata
 - **Prerequisite:** Tidak ada (Titik awal bootcamp)
 - **Learning Objectives:**
   1. Memahami bagaimana program menyimpan dan mengelola data di memori.
@@ -11,13 +11,13 @@
   3. Mengidentifikasi tipe data primitif (`string`, `number`, `boolean`, `null`, `undefined`) dan operator `typeof`.
   4. Menerapkan konvensi Clean Code dalam penamaan variabel (*intention-revealing names* & *camelCase*).
 - **Required Knowledge:** Kemampuan berpikir logis dasar.
-- **Estimated Difficulty:** 🟢 Pemula (Dasar)
+- **Estimated Difficulty:** Dasar
 - **Estimated Study Time:** ±45 menit
 - **Completion Criteria:** Berhasil menyelesaikan latihan (*Exercise*) dan perbaikan bug (*Debugging*) di file praktik secara mandiri.
 
 ---
 
-### 🏷️ Klasifikasi Standar Industri
+### Klasifikasi Standar Industri
 - **MUST KNOW (Wajib):** `const`, `let`, tipe data primitif (`string`, `number`, `boolean`, `null`, `undefined`), template literals, `typeof`.
 - **SHOULD KNOW (Penting):** Immutability pada tipe primitif vs mutability pada reference type (Array/Object).
 - **NICE TO KNOW (Lanjutan):** `BigInt`, `Symbol`, alokasi Stack Memory vs Heap Memory pada engine JavaScript (V8).
@@ -129,7 +129,7 @@ console.log(invoiceSummary);
 
 ### 8. EXERCISE (Latihan Mandiri)
 
-> 📍 *Kerjakan latihan ini di file:* [lesson-1.1-practice.js](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-1-javascript/lesson-1.1-practice.js)
+> *Kerjakan latihan ini di file:* [lesson-1.1-practice.js]
 
 **Skenario Bisnis:**
 Kamu diminta membuat modul ringkasan profil karyawan untuk sistem HR perusahaan:
