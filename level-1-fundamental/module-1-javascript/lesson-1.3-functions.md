@@ -1,10 +1,10 @@
-# 📘 LEVEL 1 — MODUL 1: PROGRAMMING FUNDAMENTALS (JAVASCRIPT)
+# LEVEL 1, MODUL 1: PROGRAMMING FUNDAMENTALS (JAVASCRIPT)
 ## LESSON 1.3: Functions & Clean Code Principles
 
 ---
 
-### 📋 Prerequisite & Metadata
-- **Prerequisite:** [Lesson 1.1: Variables](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-1-javascript/lesson-1.1-variables.md) & [Lesson 1.2: Operators & Control Flow](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-1-javascript/lesson-1.2-control-flow.md)
+### Prerequisite & Metadata
+- **Prerequisite:** [Lesson 1.1: Variables] & [Lesson 1.2: Operators & Control Flow]
 - **Learning Objectives:**
   1. Memahami konsep abstraksi logika dan prinsip DRY (*Don't Repeat Yourself*).
   2. Menguasai sintaks modern: Arrow Functions (`const fn = () => {}`) vs Function Declarations.
@@ -17,8 +17,8 @@
 
 ---
 
-### 🏷️ Klasifikasi Standar Industri
-- **MUST KNOW (Wajib):** Arrow Functions, parameters & arguments, `return`, default parameters, function scope.
+### Klasifikasi Standar Industri
+- **MUST KNOW (Wajib):** Arrow Functions, parameters & arguments, `return`, default parameters, function scope. 
 - **SHOULD KNOW (Penting):** Pure functions (tanpa side effects), Single Responsibility Principle (SRP), Guard Clause pattern dalam fungsi.
 - **NICE TO KNOW (Lanjutan):** First-class functions, Higher-Order Functions (HOF), Closures, call stack execution context.
 
@@ -148,7 +148,7 @@ console.log(`Total Belanja: ${formatCurrency(subtotal)}`); // Rp450.000
 
 ### 8. EXERCISE (Latihan Mandiri)
 
-> 📍 *Kerjakan latihan ini di file:* [lesson-1.3-practice.js](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-1-javascript/lesson-1.3-practice.js)
+> *Kerjakan latihan ini di file:* [lesson-1.3-practice.js]
 
 **Skenario Bisnis: Sistem Checkout Toko Online**
 Kamu diminta membuat 2 buah fungsi modular yang bersih:
