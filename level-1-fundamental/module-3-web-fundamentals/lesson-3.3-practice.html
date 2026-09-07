@@ -1,131 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Praktik Lesson 3.3 — Flexbox & CSS Grid Modern</title>
-  <style>
-    /* 1. RESET STANDAR WAJIB */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.5;
-      background-color: #f8fafc;
-      color: #1e293b;
-      padding-bottom: 60px;
-    }
-
-    /* 
-      =======================================================
-      LATIHAN 1: NAVBAR DENGAN FLEXBOX
-      Tugas: Jadikan .navbar memiliki:
-      - display: flex
-      - logo di kiri, menu di kanan (space-between)
-      - rata tengah vertikal (align-items: center)
-      =======================================================
-    */
-    .navbar {
-      background-color: #ffffff;
-      padding: 16px 32px;
-      border-bottom: 1px solid #e2e8f0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #475569;
-      font-weight: 500;
-    }
-
-    /* 
-      =======================================================
-      LATIHAN 2: KATALOG PRODUK DENGAN CSS GRID
-      Tugas: Jadikan .product-grid memiliki:
-      - display: grid
-      - repeat(auto-fit, minmax(240px, 1fr))
-      - gap: 24px
-      =======================================================
-    */
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      margin-top: 24px;
-    }
-
-    /* 
-      =======================================================
-      LATIHAN 3: KARTU PRODUK (FLEXBOX COLUMN)
-      Tugas: Jadikan tombol selalu menempel rapi di bagian bawah
-      menggunakan display: flex, flex-direction: column,
-      justify-content: space-between
-      =======================================================
-    */
-    .card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 280px;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      color: #64748b;
-      font-size: 0.95rem;
-      margin-bottom: 16px;
-    }
-
-    .card .price {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #0f172a;
-      margin-bottom: 16px;
-    }
-
-    .btn-buy {
-      background-color: #2563eb;
-      color: white;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .btn-buy:hover {
-      background-color: #1d4ed8;
-    }
-  </style>
+  <title>Praktik Lesson 3.3 Flexbox & CSS Grid Modern</title>
+  <link rel="stylesheet" href="lesson-3.3-practice.css">
 </head>
+
 <body>
 
   <!-- NAVBAR FLEXBOX -->
@@ -143,9 +25,9 @@
   <!-- KONTEN UTAMA DENGAN CSS GRID -->
   <main class="container">
     <h1>Katalog Produk Unggulan</h1>
-    
+
     <div class="product-grid">
-      
+
       <!-- KARTU 1 -->
       <article class="card">
         <div>
@@ -186,4 +68,5 @@
   </main>
 
 </body>
+
 </html>

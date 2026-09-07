@@ -1,14 +1,14 @@
-# 🎯 MODULE 2 PRACTICAL ASSESSMENT: Git Workflow Mastery
+# MODULE 2 PRACTICAL ASSESSMENT: Git Workflow Mastery
 ## Pintu Gerbang Kelulusan Module 2 (Version Control)
 
 ---
 
-### 📋 Deskripsi Tugas
+### Deskripsi Tugas
 Sebagai software engineer di tim, kamu diminta menyelesaikan alur kerja standar industri (*Feature Branch Workflow*) dari awal hingga akhir di repository proyek ini.
 
 ---
 
-### 📝 Langkah-Langkah Assessment:
+### Langkah-Langkah Assessment:
 
 #### Langkah 1: Setup Branch Fitur
 Pastikan kamu berada di branch utama (`main` atau `master`), lalu buat dan pindah ke branch fitur baru:
@@ -54,7 +54,7 @@ git log -n 3 --oneline
 
 ---
 
-### 🏆 Kriteria Kelulusan (Completion Criteria)
+### Kriteria Kelulusan (Completion Criteria)
 Module 2 dinyatakan **LULUS** jika:
 1. File `config.json` berhasil berada di branch utama dengan commit terdaftar rapi.
 2. Branch `feat/app-config` telah terhapus bersih.

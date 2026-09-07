@@ -1,10 +1,10 @@
-# 📦 LEVEL 1 — MODUL 2: GIT & VERSION CONTROL
+# LEVEL 1, MODUL 2: GIT & VERSION CONTROL
 ## LESSON 2.1: Git Architecture & Essential Commands
 
 ---
 
-### 📋 Prerequisite & Metadata
-- **Prerequisite:** [Modul 1: Programming Fundamentals](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-1-javascript/lesson-1.1-variables.md)
+### Prerequisite & Metadata
+- **Prerequisite:** [Modul 1: Programming Fundamentals]
 - **Learning Objectives:**
   1. Memahami arsitektur *Distributed Version Control System* (DVCS) dan 3 Area Kerja Git (*Working Directory, Staging Area, Repository*).
   2. Menguasai perintah fundamental: `git init`, `git status`, `git add`, `git commit`, `git log`, dan `git diff`.
@@ -17,14 +17,14 @@
 
 ---
 
-### 🏷️ Klasifikasi Standar Industri
+### Klasifikasi Standar Industri
 - **MUST KNOW (Wajib):** `git init`, `git status`, `git add`, `git commit`, `git log --oneline`, `.gitignore`, arsitektur 3 stages.
 - **SHOULD KNOW (Penting):** Conventional Commits (`feat:`, `fix:`, `refactor:`), `git diff`, `git restore --staged`, git commit hash (SHA-1).
 - **NICE TO KNOW (Lanjutan):** Objek internal Git (Blob, Tree, Commit, Tag), `git reflog`, `.git/` folder structure anatomy.
 
 ---
 
-### 🧠 Technology Decision Framework: Git
+### Technology Decision Framework: Git
 
 1. **WHY IT EXISTS:** Diciptakan oleh Linus Torvalds pada tahun 2005 untuk mengelola pengembangan kernel Linux setelah sistem sebelumnya (BitKeeper) berhenti gratis. Sistem kontrol versi lama tersentralisasi lambat dan bergantung pada koneksi server.
 2. **WHAT PROBLEM IT SOLVES:** Mencegah bencana "file_final_v2_fix_beneran.js", hilangnya riwayat perubahan, benturan kodingan antar tim (*overwrite* tanpa sengaja), serta memungkinkan rollback ke versi stabil kapan saja.
@@ -137,7 +137,7 @@ git log --oneline --graph --decorate
 
 ### 8. EXERCISE (Latihan Mandiri)
 
-> 📍 *Kerjakan latihan praktis terminal ini di workspace:*
+> *Kerjakan latihan praktis terminal ini di workspace:*
 
 1. Buka terminal di folder project bootcamp.
 2. Jalankan `git status` untuk memeriksa status repositori saat ini.

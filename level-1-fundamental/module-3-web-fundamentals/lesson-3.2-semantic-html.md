@@ -1,10 +1,10 @@
-# 🌐 LEVEL 1 — MODUL 3: WEB FUNDAMENTALS (HTTP, HTML, CSS)
+# LEVEL 1, MODUL 3: WEB FUNDAMENTALS (HTTP, HTML, CSS)
 ## LESSON 3.2: Semantic HTML5, Accessibility (a11y) & SEO Architecture
 
 ---
 
-### 📋 Prerequisite & Metadata
-- **Prerequisite:** [Lesson 3.1: The HTTP Protocol & Lifecycle](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-3-web-fundamentals/lesson-3.1-http-protocol.md)
+### Prerequisite & Metadata
+- **Prerequisite:** [Lesson 3.1: The HTTP Protocol & Lifecycle]
 - **Learning Objectives:**
   1. Memahami peran HTML sebagai *skeletal structure* dokumen web dan bahaya antipattern "Div Soup".
   2. Menguasai elemen semantik modern: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`.
@@ -17,14 +17,14 @@
 
 ---
 
-### 🏷️ Klasifikasi Standar Industri
+### Klasifikasi Standar Industri
 - **MUST KNOW (Wajib):** Semantic layout tags (`<header>`, `<nav>`, `<main>`, `<footer>`), form semantics (`<form>`, `<label>`, `<input>`, `<button>`), `<h1>` hingga `<h6>`, `alt` pada `<img>`.
 - **SHOULD KNOW (Penting):** WAI-ARIA attributes (`aria-label`, `aria-hidden`, `role`), semantic lists (`<ul>`, `<ol>`, `<li>`), table structure (`<thead>`, `<tbody>`).
 - **NICE TO KNOW (Lanjutan):** Open Graph meta tags (`og:title`, `og:image`), Web Components (`<template>`, Shadow DOM), microdata schema.org.
 
 ---
 
-### 🧠 Technology Decision Framework: HTML5
+### Technology Decision Framework: HTML5
 
 | Aspek | Analisis Engineering |
 | :--- | :--- |
@@ -174,7 +174,7 @@ Jika kamu membuat seluruh tubuh manusia hanya dari kumpulan "daging giling" tanp
 
 ### 8. EXERCISE (Latihan Mandiri)
 
-> 📍 *Kerjakan latihan ini di file:* [lesson-3.2-practice.html](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-3-web-fundamentals/lesson-3.2-practice.html)
+> *Kerjakan latihan ini di file:* [lesson-3.2-practice.html]
 
 **Skenario Bisnis: Refactoring Halaman Portfolio Developer**
 Kamu menerima kode HTML warisan yang penuh dengan *Div Soup*. Ubah kode berikut menjadi struktur HTML5 Semantik yang bersih:

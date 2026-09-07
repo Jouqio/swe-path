@@ -1,10 +1,10 @@
-# 🌐 LEVEL 1 — MODUL 3: WEB FUNDAMENTALS (HTTP, HTML, CSS)
+# LEVEL 1, MODUL 3: WEB FUNDAMENTALS (HTTP, HTML, CSS)
 ## LESSON 3.1: The HTTP Protocol & The Request-Response Cycle
 
 ---
 
-### 📋 Prerequisite & Metadata
-- **Prerequisite:** [Modul 1 (JavaScript)](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-1-javascript/lesson-1.1-variables.md) & [Modul 2 (Git)](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-2-git/lesson-2.1-git-fundamentals.md)
+### Prerequisite & Metadata
+- **Prerequisite:** [Modul 1 (JavaScript)] & [Modul 2 (Git)]
 - **Learning Objectives:**
   1. Memahami arsitektur Client-Server dan siklus Request-Response pada protokol HTTP/HTTPS.
   2. Menguasai struktur HTTP Request (Method, URL, Headers, Body) dan HTTP Response (Status Code, Headers, Payload).
@@ -17,14 +17,14 @@
 
 ---
 
-### 🏷️ Klasifikasi Standar Industri
+### Klasifikasi Standar Industri
 - **MUST KNOW (Wajib):** HTTP Methods (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`), Status Codes (200, 201, 204, 400, 401, 403, 404, 500), Request Headers (`Content-Type`, `Authorization`).
 - **SHOULD KNOW (Penting):** Idempotency, HTTP vs HTTPS (TLS/SSL encryption), CORS (*Cross-Origin Resource Sharing*), Statelessness HTTP.
 - **NICE TO KNOW (Lanjutan):** HTTP/1.1 vs HTTP/2 (Multiplexing) vs HTTP/3 (QUIC/UDP), HTTP Caching headers (`Cache-Control`, `ETag`).
 
 ---
 
-### 🧠 Technology Decision Framework: HTTP
+### Technology Decision Framework: HTTP
 
 | Aspek | Analisis Engineering |
 | :--- | :--- |
@@ -183,7 +183,7 @@ const createNewOrder = async (orderPayload) => {
 
 ### 8. EXERCISE (Analisis Arsitektur API)
 
-> 📍 *Kerjakan latihan analisis ini:*
+> *Kerjakan latihan analisis ini:*
 
 Sebagai API Architect di sebuah platform FinTech, tentukan kombinasi **HTTP Method** dan **HTTP Status Code (jika berhasil)** yang paling tepat untuk 4 skenario berikut:
 

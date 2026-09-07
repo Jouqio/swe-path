@@ -1,10 +1,10 @@
-# 🌐 LEVEL 1 — MODUL 3: WEB FUNDAMENTALS (HTTP, HTML, CSS)
+# LEVEL 1, MODUL 3: WEB FUNDAMENTALS (HTTP, HTML, CSS)
 ## LESSON 3.3: Modern CSS Architecture: Box Model, Flexbox & CSS Grid
 
 ---
 
-### 📋 Prerequisite & Metadata
-- **Prerequisite:** [Lesson 3.2: Semantic HTML5 & Accessibility](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-3-web-fundamentals/lesson-3.2-semantic-html.md)
+### Prerequisite & Metadata
+- **Prerequisite:** [Lesson 3.2: Semantic HTML5 & Accessibility]
 - **Learning Objectives:**
   1. Memahami CSS Box Model secara presisi dan alasan mengapa `box-sizing: border-box` adalah aturan wajib nomor satu di CSS modern.
   2. Menguasai layout 1-dimensi menggunakan **CSS Flexbox** (`justify-content`, `align-items`, `flex-direction`, `gap`).
@@ -17,14 +17,14 @@
 
 ---
 
-### 🏷️ Klasifikasi Standar Industri
+### Klasifikasi Standar Industri
 - **MUST KNOW (Wajib):** `box-sizing: border-box`, Flexbox container properties (`display: flex`, `justify-content`, `align-items`, `gap`), CSS Grid (`display: grid`, `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))`), Media Queries.
 - **SHOULD KNOW (Penting):** Flex item properties (`flex-grow`, `flex-shrink`, `flex-basis`), CSS Custom Properties (CSS Variables `--color-primary`), Mobile-First responsive design.
 - **NICE TO KNOW (Lanjutan):** CSS Subgrid, CSS Container Queries (`@container`), Logical properties (`margin-inline`, `padding-block`).
 
 ---
 
-### 🧠 Technology Decision Framework: Flexbox vs CSS Grid
+### Technology Decision Framework: Flexbox vs CSS Grid
 
 | Aspek | CSS Flexbox (1-Dimensional) | CSS Grid (2-Dimensional) |
 | :--- | :--- | :--- |
@@ -183,7 +183,7 @@ Setiap elemen di halaman web dipandang oleh browser sebagai sebuah **kotak berla
 
 ### 8. EXERCISE (Latihan Mandiri)
 
-> 📍 *Kerjakan latihan ini di file:* [lesson-3.3-practice.html](file:///c:/Users/ADVAN/OneDrive/Dokumen/SOFTWARE%20ENGINEERING%20BOOTCAMP/level-1-fundamental/module-3-web-fundamentals/lesson-3.3-practice.html)
+> *Kerjakan latihan ini di file:* [lesson-3.3-practice.html]
 
 **Skenario Bisnis: Toko Online Modern**
 Buatlah layout halaman katalog produk:
